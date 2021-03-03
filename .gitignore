@@ -3,3 +3,4 @@
 **/dist/
 **/package-lock.json
 **/tsconfig.tsbuildinfo
+config/default.json

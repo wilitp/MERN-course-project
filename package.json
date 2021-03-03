@@ -4,13 +4,16 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start:api": "tsc -w & nodemon .",
+    "start:api": "concurrently 'tsc -w' 'nodemon .'",
+    "build:api": "tsc",
+    "start": "npm run start:api",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "bcryptjs": "^2.4.3",
     "config": "^3.3.3",
     "express": "^4.17.1",
@@ -21,7 +24,10 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
+    "@types/config": "0.0.38",
     "@types/express": "^4.17.11",
+    "@types/gravatar": "^1.8.1",
+    "@types/jsonwebtoken": "^8.5.0",
     "@types/node": "^14.14.22",
     "concurrently": "^5.3.0",
     "nodemon": "^2.0.7",
